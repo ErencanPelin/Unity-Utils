@@ -2,7 +2,9 @@
   "author": {
     "name": "erencanpelin"
   },
-  "dependencies": {},
+  "dependencies": {
+    "com.unity.test-framework": "1.5.1"
+  },
   "description": "Utils for Unity package.",
   "displayName": "Unity Utils",
   "keywords": [
