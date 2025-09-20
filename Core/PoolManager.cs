@@ -5,6 +5,11 @@
 // Date: 20/09/2025
 // -----------------------------------------------------
 
+#nullable enable
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine;
+
 namespace UnityUtils.Core
 {
     public abstract class ObjectPool<TComponent, TData> where TComponent : Component

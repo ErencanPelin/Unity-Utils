@@ -5,6 +5,9 @@
 // Date: 20/09/2025
 // -----------------------------------------------------
 
+using UnityEngine;
+using UnityEngine.Events;
+
 namespace UnityUtils.Core
 {
     [System.Serializable]
