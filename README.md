@@ -45,3 +45,42 @@ private void OnCurrentLevelChanged(int newLevelValue)
 }
 
 ```
+
+### ServiceLocator
+Easy way to create global services. This is better than using Singletons and Static classes for a number of reasons - ask AI if you're interested to know why.
+```cs
+/* 
+Sample service. You should define services using Interfaces as you can abstract the implementation with the contract provided by the ServiceLocator that way.
+*/
+public interface IGameSaveService
+{
+    public void SaveGame();
+}
+
+// Sample service implementation
+public class GameSaveServiceImpl : IGameSaveService
+{
+    public void SaveGame()
+    {
+        ...
+    }
+}
+
+// When you register services
+public void Awake()
+{
+    ServiceLocator.Instance.Register<IGameSaveService>(new GameSaveServiceImpl());
+}
+
+// When you need to get the service
+public void OnSaveButtonPressed()
+{
+    ServiceLocator.Instance.Resolve<IGameSaveService>().SaveGame();
+}
+
+// De-registering services
+public void OnDestroy()
+{
+    ServiceLocator.Instance.Unregister<IGameSaveService>();
+}
+```
