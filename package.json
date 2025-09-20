@@ -1,0 +1,17 @@
+{
+  "author": {
+    "name": "erencanpelin"
+  },
+  "dependencies": {},
+  "description": "Utils for Unity package.",
+  "displayName": "Unity Utils",
+  "keywords": [
+    "utils",
+    "core",
+    "base"
+  ],
+  "name": "com.eren.unity-statemachines",
+  "unity": "6000.1",
+  "unityRelease": "7f1",
+  "version": "1.0.0"
+}
