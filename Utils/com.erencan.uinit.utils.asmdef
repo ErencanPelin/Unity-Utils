@@ -4,11 +4,11 @@
   "defineConstraints": [],
   "excludePlatforms": [],
   "includePlatforms": [],
-  "name": "Eren.UnityUtils",
+  "name": "Erencan.Uinit.Utils",
   "noEngineReferences": false,
   "overrideReferences": false,
   "precompiledReferences": [],
   "references": [],
-  "rootNamespace": "",
+  "rootNamespace": "Uinit.Utils",
   "versionDefines": []
 }

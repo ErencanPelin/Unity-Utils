@@ -7,9 +7,9 @@
 
 using NUnit.Framework;
 using UnityEngine.Events;
-using UnityUtils.Predicates;
+using Uinit.Utils.Predicates;
 
-namespace UnityUtils.Tests
+namespace Uinit.Utils.Tests
 {
     [TestFixture]
     public class PredicateTests

@@ -7,9 +7,9 @@
 
 using System;
 using NUnit.Framework;
-using UnityUtils.Core;
+using Uinit.Utils.Core;
 
-namespace UnityUtils.Tests
+namespace Uinit.Utils.Tests
 {
     [TestFixture]
     public class ServiceLocatorTests

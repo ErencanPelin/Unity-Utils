@@ -5,7 +5,7 @@
 // Date: 28/01/2025
 // -----------------------------------------------------
 
-namespace UnityUtils.Predicates
+namespace Uinit.Utils.Predicates
 {
     public interface IPredicate
     {

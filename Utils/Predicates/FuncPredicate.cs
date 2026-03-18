@@ -7,7 +7,7 @@
 
 using System;
 
-namespace UnityUtils.Predicates
+namespace Uinit.Utils.Predicates
 {
     public class FuncPredicate : IPredicate
     {

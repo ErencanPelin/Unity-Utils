@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UnityUtils.Core
+namespace Uinit.Utils.Core
 {
     [System.Serializable]
     public class Observable<T>

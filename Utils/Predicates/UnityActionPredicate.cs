@@ -8,7 +8,7 @@
 using System;
 using UnityEngine.Events;
 
-namespace UnityUtils.Predicates
+namespace Uinit.Utils.Predicates
 {
     public class UnityActionPredicate : IPredicate
     {

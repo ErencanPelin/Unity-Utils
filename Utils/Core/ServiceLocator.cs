@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnityUtils.Core
+namespace Uinit.Utils.Core
 {
     public class ServiceLocator
     {

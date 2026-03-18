@@ -8,7 +8,7 @@
   "includePlatforms": [
     "Editor"
   ],
-  "name": "Eren.TGP.Core.Tests",
+  "name": "Erencan.Uinit.Utils.Tests",
   "noEngineReferences": false,
   "overrideReferences": false,
   "precompiledReferences": [
@@ -18,8 +18,8 @@
   "references": [
     "GUID:0acc523941302664db1f4e527237feb3",
     "GUID:27619889b8ba8c24980f49ee34dbb44a",
-    "Eren.UnityUtils"
+    "Erencan.Uinit.Utils"
   ],
-  "rootNamespace": "TGP",
+  "rootNamespace": "Uinit.Utils.Tests",
   "versionDefines": []
 }

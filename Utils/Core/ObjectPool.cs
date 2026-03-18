@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace UnityUtils.Core
+namespace Uinit.Utils.Core
 {
     public abstract class ObjectPool<TComponent, TData> where TComponent : Component
     {
