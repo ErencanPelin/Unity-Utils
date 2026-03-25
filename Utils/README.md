@@ -82,3 +82,64 @@ public void OnDestroy()
     ServiceLocator.Instance.Unregister<IGameSaveService>();
 }
 ```
+
+### Dependency Injection
+A pragmatic C# way to setup dependency injection among components of a gameObject as well as its children gameObjects without 
+any overly fancy, or heavy DI frameworks.
+```csharp
+// Provider component, lives on PlayerRoot
+public class PlayerInventoryProvider : MonoBehaviour, IProvider<IPlayerInventory>
+{
+    private void Awake()
+    {
+        Provide(new PlayerInventory());
+    }
+
+    public void Provide(IPlayerInventory data)
+    {
+        //apply dependencies to any component that requires
+        foreach (var dependency in GetComponentsInChildren<IRequire<IPlayerInventory>>(true))
+        {
+            dependency.SetRef(data);
+        }
+    }
+}
+
+// Dependent component, lives anywhere in the Player Object's hierarchy
+public PlayerEquipmentController : MonoBehaviour, IRequire<IPlayerInventory>
+{
+    private IPlayerInventory playerInventory;
+    
+    public void SetRef(IPlayerInventory data) => playerInventory = data;
+    
+    public void Awake()
+    {
+        // NOTE: Since our DI occurs in Awake(), its not safe to access playerInventory here.
+        // As recommened by Unity, DI should occur in Awake() and any usage should be in Start()
+    }
+}
+```
+
+### Bootstrapper
+```csharp
+public class ServicesBootstrap : MonoBehaviour, IBootstrapper
+{
+    // Lets you control what order bootstrapping occurs in
+    // Especially useful if one bootstrapper relies on another to be strapped first
+    public int Order => -1;
+
+    public void Bootstrap()
+    {
+        Debug.Log("Running services bootstrap");
+
+        //Notitications
+        ServiceLocator.Instance.Register<INotificationService>(new NotificationService());
+    }
+
+    // Important to undo whatever actions were done in Bootstrap here to dispose of resources correctly
+    public void Unstrap()
+    {
+        ServiceLocator.Instance.Unregister<INotificationService>();
+    }
+}
+```
